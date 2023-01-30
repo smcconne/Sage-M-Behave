@@ -20,7 +20,11 @@ behave 1.2.6
 behave --tags="@register"
 ```
 
-### Then run the smoke test with this command:
+### Users are frequently deleted, so re-run the above command if the tests stop working.
+
+### The website often goes offline; just wait 5 mins and it will come back up.
+
+### Run the smoke test with this command:
 
 ```
 behave --tags="@smoke_test"

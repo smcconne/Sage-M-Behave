@@ -1,7 +1,7 @@
-Feature: Log in as automation user
+Feature: Login tests
 	
 	@register
-	Scenario: I register as standard user
+	Scenario: I register the standard user
 		Given I close the welcome banner
 		When I navigate to the registration page
 		Then the registration page has loaded
