@@ -14,7 +14,7 @@ def go_to_login_page(context):
 	context.utils.select_xpath("//button[contains(@aria-label, 'Go to login page')]").click()
 	
 def check_if_logged_in(context):
-	context.utils.check_visible_xpath("//button[contains(@aria-label, 'Show the shopping cart')]")
+	return context.utils.check_visible_xpath("//button[contains(@aria-label, 'Show the shopping cart')]")
 	
 def check_if_logged_out(context):
-	context.utils.check_invisible_xpath("//button[contains(@aria-label, 'Show the shopping cart')]")
+	return context.utils.check_invisible_xpath("//button[contains(@aria-label, 'Show the shopping cart')]")

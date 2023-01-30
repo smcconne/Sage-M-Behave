@@ -14,8 +14,14 @@ behave 1.2.6
 
 ## Running tests
 
-### Use the following code to run tests
+### First you will have to register the standard user by running this command:
 
 ```
-behave
+behave --tags="@register"
+```
+
+### Then run the smoke test with this command:
+
+```
+behave --tags="@smoke_test"
 ```

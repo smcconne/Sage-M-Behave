@@ -7,7 +7,7 @@ import time
 from behave.fixture import use_fixture_by_tag
 from tests.utils.utils import UtilityFunctions
  
-def before_all(context):
+def before_scenario(context, scenario):
 	config = ConfigParser()
 	print((os.path.join(os.getcwd(), 'setup.cfg')))
 	my_file = (os.path.join(os.getcwd(), 'setup.cfg'))
@@ -27,12 +27,8 @@ def before_all(context):
 	# Set other context/environment variables
 	context.standard_user_email = config.get('Environment', 'Standard_user_email')
 	context.standard_user_password = config.get('Environment', 'Standard_user_password')
-
-def before_scenario(context, scenario):
+	
 	context.utils.open('https://juice-shop.herokuapp.com/')
 	
 def after_scenario(context, scenario):
-    context.utils.close()
- 
-def after_all(context):
     context.utils.close()
