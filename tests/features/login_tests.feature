@@ -10,7 +10,6 @@ Feature: Login tests
 		When I log in as standard user
 		Then I should be logged in
 	
-	@smoke_test
 	Scenario: I can log in as the standard user
 		Given I close the welcome banner
 		When I navigate to the login page

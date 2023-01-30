@@ -18,7 +18,7 @@ def step_impl(context, target_page):
 		case "basket" | "address select" | "create address":
 			site_banner.go_to_basket_page(context)
 			assert basket_page.has_loaded(context)
-			if target_page == "address select":
+			if target_page != "basket":
 				basket_page.go_to_address_select_page(context)
 				assert address_select_page.has_loaded(context)
 				if target_page == "create address":

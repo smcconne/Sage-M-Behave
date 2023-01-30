@@ -26,10 +26,10 @@ class UtilityFunctions(object):
     def select_css(self, css):
         return self._driver_wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, css)))
        
-    def select_xpath_clickable(self, xpath):
+    def wait_until_clickable_xpath(self, xpath):
         return self._driver_wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, xpath)))
         
-    def select_css_clickable(self, css):
+    def wait_until_clickable_css(self, css):
         return self._driver_wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, css)))
     
     def hidden_xpath(self, xpath):

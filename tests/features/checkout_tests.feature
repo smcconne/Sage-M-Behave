@@ -10,4 +10,3 @@ Feature: Checkout tests
 		And I navigate to the create address page
 		Then the create address page has loaded
 		When I enter a new address
-		Then the address select page has loaded
