@@ -23,11 +23,16 @@ def before_all(context):
 		case other:
 			driver = webdriver.Chrome()
 	context.utils = UtilityFunctions(driver)
-	context.utils.open('https://juice-shop.herokuapp.com/')
 	
 	# Set other context/environment variables
 	context.standard_user_email = config.get('Environment', 'Standard_user_email')
 	context.standard_user_password = config.get('Environment', 'Standard_user_password')
+
+def before_scenario(context, scenario):
+	context.utils.open('https://juice-shop.herokuapp.com/')
+	
+def after_scenario(context, scenario):
+    context.utils.close()
  
 def after_all(context):
     context.utils.close()

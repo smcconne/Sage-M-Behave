@@ -3,7 +3,7 @@ import os
 from configparser import ConfigParser
 from selenium.webdriver.common.keys import Keys
 from behave import given, when, then
-from tests.pages import login_page
+from tests.pages import login_page, registration_page
 from tests.pages.banners import site_banner
 
 @when(u'I navigate to the {target_page} page')

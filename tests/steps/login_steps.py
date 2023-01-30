@@ -17,10 +17,12 @@ def step_impl(context, user_type):
 		login_page.enter_credentials(context, context.standard_user_email, context.standard_user_password)
 	if user_type == "admin":
 		context.scenario.skip(reason='admin login not implemented - see login_steps.py: When I login as admin user')
+	if user_type == "random":
+		login_page.enter_credentials(context, context.random_user_email, context.random_user_password)
 
-@then(u'I should{ not:optional} be logged in')
-def step_impl(context, not_):
-	if not_ is None:
+@then(u'I should {be} logged in')
+def step_impl(context, be):
+	if be == "be":
 		assert site_banner.check_if_logged_in(context)
-	else:
+	if be == "not be":
 		assert site_banner.check_if_logged_out(context)
