@@ -6,5 +6,5 @@ from selenium.webdriver.common.keys import Keys
 def has_loaded(context):
 	return context.utils.check_visible_xpath("//app-search-result")
 	
-def find_and_add_to_cart(context, search):
+def find_and_add_to_basket(context, search):
 	context.utils.select_xpath("//*[text()[contains(.,'" + search + "')]]//ancestor::mat-card//button").click()

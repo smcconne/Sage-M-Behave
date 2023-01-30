@@ -20,9 +20,9 @@ behave 1.2.6
 behave --tags="@register"
 ```
 
-### Users are frequently deleted, so re-run the above command if the tests stop working.
+Users are frequently deleted, so re-run the above command if the tests stop working.
 
-### The website often goes offline; just wait 5 mins and it will come back up.
+The website often goes offline; just wait 5 mins and it will come back up.
 
 ### Run the smoke test with this command:
 
