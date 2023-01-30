@@ -7,7 +7,7 @@ from faker import Faker
 def has_loaded(context):
 	return context.utils.check_visible_xpath("//app-address-create")
 
-def enter_random_address(context, email, password):
+def enter_random_address(context):
 	fake = Faker()
 	context.utils.select_css("input#mat-input-1").send_keys(fake.country())
 	context.utils.select_css("input#mat-input-2").send_keys(fake.name())
