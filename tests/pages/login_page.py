@@ -11,9 +11,5 @@ def enter_credentials(context, email, password):
 	context.utils.select_css("input#password").send_keys(password)
 	context.utils.select_css("button#loginButton").click()
 
-def toggle_account_menu(context):
-	context.utils.select_xpath("//button[contains(@aria-label, 'Show/hide account menu')]").click()
-
-def go_to_login_page(context):
-	toggle_account_menu(context)
-	context.utils.select_xpath("//button[contains(@aria-label, 'Go to login page')]").click()
+def go_to_registration_page(context):
+	context.utils.select_css("div#newCustomerLink a").click()
