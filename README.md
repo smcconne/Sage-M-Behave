@@ -1,4 +1,4 @@
-# juice-shop-automation
+# Behave automation
 
 ## Dependencies
 
